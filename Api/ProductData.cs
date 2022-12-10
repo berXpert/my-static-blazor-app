@@ -16,8 +16,8 @@ public interface IProductData
 
 public class ProductData : IProductData
 {
-    private readonly List<Product> products = new List<Product>
-        {
+    private readonly List<Product> products = new()
+    {
             new Product
             {
                 Id = 10,
@@ -41,7 +41,7 @@ public class ProductData : IProductData
             }
         };
 
-    private int GetRandomInt()
+    private static int GetRandomInt()
     {
         var random = new Random();
         return random.Next(100, 1000);
